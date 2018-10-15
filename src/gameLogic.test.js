@@ -55,4 +55,56 @@ it("should return false", () => {
 	expect(gameLogic.checkIfMoveIsLeagal('o')).toBe(false);
 });
 
+it("should return false", () => {
+	expect(gameLogic.victoryCheck(['1','2','3','4','5','6','7','8','9'])).toBe(false);
+});
+
+it("should return true", () => {
+	expect(gameLogic.victoryCheck([	'x','x','x',
+									'4','5','6',
+									'7','8','9'])).toBe(true);
+});
+
+it("should return true", () => {
+	expect(gameLogic.victoryCheck([	'1','2','3',
+									'x','x','x',
+									'7','8','9'])).toBe(true);
+});
+
+it("should return true", () => {
+	expect(gameLogic.victoryCheck([	'1','2','3',
+									'4','5','6',
+									'o','o','o'])).toBe(true);
+});
+
+it("should return true", () => {
+	expect(gameLogic.victoryCheck([	'x','2','3',
+									'x','5','6',
+									'x','8','9'])).toBe(true);
+});
+
+it("should return true", () => {
+	expect(gameLogic.victoryCheck([	'1','x','3',
+									'4','x','6',
+									'7','x','9'])).toBe(true);
+});
+
+it("should return true", () => {
+	expect(gameLogic.victoryCheck([	'1','2','o',
+									'4','5','o',
+									'7','8','o'])).toBe(true);
+});
+
+it("should return true", () => {
+	expect(gameLogic.victoryCheck([	'x','2','3',
+									'4','x','6',
+									'7','8','x'])).toBe(true);
+});
+
+it("should return true", () => {
+	expect(gameLogic.victoryCheck([	'1','2','o',
+									'4','o','6',
+									'o','8','9'])).toBe(true);
+});
+
 

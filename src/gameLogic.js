@@ -26,4 +26,35 @@ module.exports = {
 		}
 		return true;
 	},
+	victoryCheck : function( gameState ){
+		if( gameState[0] === gameState[1] && gameState[1] === gameState[2] ){
+			return true;
+		}
+		else if(gameState[0] === gameState[1] && gameState[1] === gameState[2]){
+			return true;
+		}	
+		else if(gameState[3] === gameState[4] && gameState[4] === gameState[5]){
+			return true;
+		}
+		else if(gameState[6] === gameState[7] && gameState[7] === gameState[8]){
+			return true;
+		}
+		else if(gameState[0] === gameState[3] && gameState[3] === gameState[6]){
+			return true;
+		}
+		else if(gameState[1] === gameState[4] && gameState[4] === gameState[7]){
+			return true;
+		}
+		else if(gameState[2] === gameState[5] && gameState[5] === gameState[8]){
+			return true;
+		}
+		else if(gameState[0] === gameState[4] && gameState[4] === gameState[8]){
+			return true;
+		}
+		else if(gameState[2] === gameState[4] && gameState[4] === gameState[6]){
+			return true;
+		}
+
+		return false;
+	}
 };
