@@ -26,4 +26,12 @@ it("should return true", () => {
 	expect(gameLogic.checkIfMoveIsLeagal('1','x')).toBe(true);
 });
 
+it("should return false", () => {
+	expect(gameLogic.checkIfMoveIsLeagal('x','x')).toBe(false);
+});
+
+it("should return false", () => {
+	expect(gameLogic.checkIfMoveIsLeagal('o','x')).toBe(false);
+});
+
 

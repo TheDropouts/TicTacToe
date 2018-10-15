@@ -13,6 +13,9 @@ module.exports = {
 		return true;
 	},
 	checkIfMoveIsLeagal: function( field, move ){
+		if(field == 'x' || field == 'o'){
+			return false;
+		}
 		return true;
 	}
 };
