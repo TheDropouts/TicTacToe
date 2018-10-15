@@ -22,3 +22,8 @@ it("should return true", () => {
 	expect(gameLogic.makeAMove(['1','2','3','4','5','6','7','8','9'], 'x1' )).toBe(true);
 });
 
+it("should return true", () => {
+	expect(gameLogic.checkIfMoveIsLeagal('1','x')).toBe(true);
+});
+
+

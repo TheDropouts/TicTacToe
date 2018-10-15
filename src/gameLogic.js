@@ -11,5 +11,8 @@ module.exports = {
 	},
 	makeAMove: function(gameState, Move){
 		return true;
+	},
+	checkIfMoveIsLeagal: function( field, move ){
+		return true;
 	}
 };
