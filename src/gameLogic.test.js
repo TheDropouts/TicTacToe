@@ -56,8 +56,23 @@ it("should return false", () => {
 });
 
 it("should return false", () => {
-	expect(gameLogic.victoryCheck(['1','2','3','4','5','6','7','8','9'])).toBe(false);
+	expect(gameLogic.victoryCheck([ '1','2','3',
+									'4','5','6',
+									'7','8','9'])).toBe(false);
 });
+
+it("should return false", () => {
+	expect(gameLogic.victoryCheck([ 'x','x','o',
+									'x','o','o',
+									'7','x','x'])).toBe(false);
+});
+
+it("should return false", () => {
+	expect(gameLogic.victoryCheck([ 'o','o','x',
+									'x','o','o',
+									'o','x','x'])).toBe(false);
+});
+
 
 it("should return true", () => {
 	expect(gameLogic.victoryCheck([	'x','x','x',
