@@ -23,15 +23,15 @@ it("should return true", () => {
 });
 
 it("should return true", () => {
-	expect(gameLogic.checkIfMoveIsLeagal('1','x')).toBe(true);
+	expect(gameLogic.checkIfMoveIsLeagal('1')).toBe(true);
 });
 
 it("should return false", () => {
-	expect(gameLogic.checkIfMoveIsLeagal('x','x')).toBe(false);
+	expect(gameLogic.checkIfMoveIsLeagal('x')).toBe(false);
 });
 
 it("should return false", () => {
-	expect(gameLogic.checkIfMoveIsLeagal('o','x')).toBe(false);
+	expect(gameLogic.checkIfMoveIsLeagal('o')).toBe(false);
 });
 
 
