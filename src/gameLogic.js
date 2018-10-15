@@ -8,5 +8,8 @@ module.exports = {
 			throw input + " is not a valid input only acceptable input is on the form x1 or o1";
 		}
 		return input.toLowerCase();
+	},
+	makeAMove: function(gameState, Move){
+		return true;
 	}
 };
