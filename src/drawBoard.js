@@ -1,98 +1,92 @@
-
-/* Array of size 9 */ 
-
-
-function gameBoard()
-{	
-
+module.exports = gameBoard {	
+	
+	var inputParameter = require('./src/gameLogic.js');
+	var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];			/* Array of size 9 */ 
 	var turnCount = 1;
-    var winner;
-    var gameOver = false;
-
-
-
-	function checkGame()
-	{		
-			if(gameOver === true)
+	var gameStatus = false;
+	var player === 'x';
+	
+	function switchPlayer()	
+	{
+			if(player === 'x')
 			{
-				
-				return "Game over!";
+			   return(player === 'o');
 			}
 			else
 			{
-				return drawBoard();
+				return(player === 'x');
 			}
 	}
-
-
-	function drawBoard(inputParameter)
+   
+	function checkGame()
 	{	
+		if(gameStatus === true)
+		{
+			return "Game over!";
+		}
+		else
+		{
+			return drawBoard();
+		}
+	}
 
-		checkGame(gamestart);
-		
-		var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];
-
+	function drawBoard(input)
+	{	
+		checkGame(gameStatus);
+			
 		var row1 = gameboard[0]	+ ' | ' + gameboard[1] + ' | ' + gameboard[2] + '\n';
 		var row2 = gameboard[3] + ' | ' + gameboard[4] + ' | ' + gameboard[5] + '\n';
 		var row3 = gameboard[6] + ' | ' + gameboard[7] + ' | ' + gameboard[8] + '\n';
-		
+			
 		console.log(row1	+ '\n');
 		console.log(row2	+ '\n');
 		console.log(row3	+ '\n');
-
-		drawMove();
-	
+				
+		return drawMove(input);
 	}
 
-
-	function drawMove(inputParameter)
+	function drawMove(player)
 	{	
-
+		console.log('Player ' + player  ' turn' );
+		/// makeAMove: function(gameState, move)
 		turnCount++;
-		
-		var move = inputParameter;
-
-
-
+		/// checkIfMoveIsLeagal
+		if(player === 'x')
+		{	
+			//makeAMove: function(gameState, move){
+			switchPlayer(player);
+			return drawMove('o');
+		}
+		else(player === 'o')
+		{	
+			// makeAMove: function(gameState, move){
+			switchPlayer(player);
+			return drawMove('x');		
+		}	
+		//victoryCheck
 		if(turnCount > 9)
 		{
 			console.log("Stalemate");
 			return refreshBoard();
 		}
 
-
-
 	}
 
-	function Victory(inputParameter)
-	{
+	function victory(inputParameter)
+	{	
+		// victoryCheck
 		if(inputParameter === true)
 		{
-			console.log("Winner");
+			console.log('Winner is' + player);
 			gameOver = true;
 			return refreshBoard();
 		}
 	}
 
-
 	function refreshBoard()
 	{
 		gameboard =	[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
 		turnCount = 1;
-		gameOver = false;
+		gameStatus = false;
 	}
-
-
-/*
-	const winningConditions = [
-	    [0,1,2], [3,4,5], [6,7,8], 
-	    [0,3,6], [1,4,7], [2,5,8], 
-	    [0,4,8], [2,4,6]
-	  ]
-*/
-
-
-}
-
-
-gameBoard();
+};
