@@ -1,36 +1,32 @@
-module.exports = gameBoard {	
+module.exports = {	
 	
-	var inputParameter = require('./src/gameLogic.js');
-	var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];			/* Array of size 9 */ 
+
+	/* var inputParameter = require('./src/gameLogic.js'); 
+	var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];			
 	var turnCount = 1;
 	var gameStatus = false;
-	var player === 'x';
-	
-	function switchPlayer()	
-	{
-			if(player === 'x')
-			{
-			   return(player === 'o');
-			}
-			else
-			{
-				return(player === 'x');
-			}
-	}
-   
-	function checkGame()
+	var player === 'x'; */
+	switchPlayer: function(player)	
+	{		
+		if(player === 'x'){
+			return(player = 'o');
+		}
+		else{
+			return(player = 'x');
+		}
+	},
+   	
+   	checkGame: function(gameStatus)
 	{	
-		if(gameStatus === true)
-		{
+		if(gameStatus === true){
 			return "Game over!";
 		}
-		else
-		{
+		else{
 			return drawBoard();
 		}
-	}
+	},
 
-	function drawBoard(input)
+	drawBoard: function(input)
 	{	
 		checkGame(gameStatus);
 			
@@ -42,12 +38,13 @@ module.exports = gameBoard {
 		console.log(row2	+ '\n');
 		console.log(row3	+ '\n');
 				
+		 
 		return drawMove(input);
-	}
+	},
 
-	function drawMove(player)
+	drawMove: function(player)
 	{	
-		console.log('Player ' + player  ' turn' );
+		console.log('Player ' + player + 'turn' );
 		/// makeAMove: function(gameState, move)
 		turnCount++;
 		/// checkIfMoveIsLeagal
@@ -70,9 +67,9 @@ module.exports = gameBoard {
 			return refreshBoard();
 		}
 
-	}
+	},
 
-	function victory(inputParameter)
+	endGame: function(inputParameter)
 	{	
 		// victoryCheck
 		if(inputParameter === true)
@@ -81,9 +78,9 @@ module.exports = gameBoard {
 			gameOver = true;
 			return refreshBoard();
 		}
-	}
+	},
 
-	function refreshBoard()
+	refreshBoard: function()
 	{
 		gameboard =	[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
 		turnCount = 1;
