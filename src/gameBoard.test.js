@@ -9,8 +9,13 @@ it("It should test to switch turn between player: o to player: x on the gameboar
 });
 
 it("It should announce a gameover if the gamestatus is true ", () => {
-	expect(gameBoard.checkGame('x')).toEqual('o');
+	expect(gameBoard.checkGame(true)).toBe("Game over!");
 });
+
+it("It should return the gameboard if the gamestatus is false ", () => {
+	expect(gameBoard.checkGame(false)).toReturn();
+});
+
 
 
 it("It should print out inital gameboard", ()	=> {
