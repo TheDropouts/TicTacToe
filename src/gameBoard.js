@@ -12,8 +12,7 @@ module.exports = {
 
 	/* This function works,  */	
 	drawBoard: function()
-	{	
-	
+	{		
 
 		var row1 = gameboard[0]	+ ' | ' + gameboard[1] + ' | ' + gameboard[2] + '\n';
 		var row2 = gameboard[3] + ' | ' + gameboard[4] + ' | ' + gameboard[5] + '\n';
@@ -31,14 +30,14 @@ module.exports = {
 			return(player = 'x');
 		}
 	},
-   	
+   	/* This function works */
    	checkGame: function(gameStatus)
 	{	
 		if(gameStatus === true){
 			return "Game over!";
 		}
 		else{
-			return false; //drawBoard();
+			return false;
 		}
 	},
 
@@ -49,8 +48,7 @@ module.exports = {
 		var move = 0;
 		console.log('Player ' + player + 'your move, enter your row column:');
 		
-		//gameLogic.valitadeInput(move);
-		/// input move example x1 
+		gameLogic.valitadeInput(move);
 		
 		return drawMove(player, move);
 		
@@ -58,8 +56,9 @@ module.exports = {
 	},
 	drawMove: function(player, move)
 	{	
-	
+		
 		gameLogic.checkIfMoveIsLeagal(move);
+		gameLogic.victoryCheck(gameboard);
 		gameLogic.makeAMove(gameboard, move);
 
 		/// makeAMove: function(gameState, move)
