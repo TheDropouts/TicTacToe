@@ -1,6 +1,7 @@
 
 var gameLogic = require('./gameLogic');
-const readline = require('readline');
+
+
 var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];			
 var turnCount = 1;
 var gameStatus = false;
@@ -9,19 +10,18 @@ var player = 'x';
 
 module.exports = {	
 
+	/* This function works,  */	
 	drawBoard: function()
 	{	
-		//checkGame(gameStatus);
-		
+	
 
 		var row1 = gameboard[0]	+ ' | ' + gameboard[1] + ' | ' + gameboard[2] + '\n';
 		var row2 = gameboard[3] + ' | ' + gameboard[4] + ' | ' + gameboard[5] + '\n';
 		var row3 = gameboard[6] + ' | ' + gameboard[7] + ' | ' + gameboard[8] + '\n';
-				
-		/*gameLogic.valitadeInput(player); */
-		return ('\n' + '' + row1 + '' + row2 + '' + row3);
+			
+		return (console.log('\n' + '' + row1 + '' + row2 + '' + row3));
 	},
-	
+	/* This function works */	
 	switchPlayer: function(player)	
 	{		
 		if(player === 'x'){
@@ -45,21 +45,13 @@ module.exports = {
 
 	getInput: function()
 	{	
-		/* rl.question('What is your favorite food? ', (answer) => {
-  					console.log(`Oh, so your favorite food is ${answer}`);
-		}); */
+	
 		var move = 0;
 		console.log('Player ' + player + 'your move, enter your row column:');
-
-		const rl = readline.createInterface({
-		  input: process.stdin,
-		  output: process.stdout
-		});
-
-		rl.on('line', (input) => {
-  			console.log(`Received: ${input}`);
-  			move = input;
-		});
+		
+		gameLogic.valitadeInput(move); */
+		/// input move example x1 
+		
 		return drawMove(player, move);
 		
 
