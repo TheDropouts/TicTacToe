@@ -49,7 +49,7 @@ module.exports = {
 		var move = 0;
 		console.log('Player ' + player + 'your move, enter your row column:');
 		
-		gameLogic.valitadeInput(move); */
+		//gameLogic.valitadeInput(move);
 		/// input move example x1 
 		
 		return drawMove(player, move);
