@@ -1,7 +1,6 @@
 
 var gameLogic = require('./gameLogic');
-
-
+var RunInConsole = require('./runinconsole');
 var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];			
 var turnCount = 1;
 var gameStatus = false;
@@ -13,7 +12,6 @@ module.exports = {
 	/* This function works,  */	
 	drawBoard: function()
 	{		
-
 		var row1 = gameboard[0]	+ ' | ' + gameboard[1] + ' | ' + gameboard[2] + '\n';
 		var row2 = gameboard[3] + ' | ' + gameboard[4] + ' | ' + gameboard[5] + '\n';
 		var row3 = gameboard[6] + ' | ' + gameboard[7] + ' | ' + gameboard[8] + '\n';
@@ -34,6 +32,7 @@ module.exports = {
    	checkGame: function(gameStatus)
 	{	
 		if(gameStatus === true){
+		
 			return "Game over!";
 		}
 		else{
@@ -41,46 +40,53 @@ module.exports = {
 		}
 	},
 
+	greetGame: function()
+	{	
+		console.log("Welcome to the game of Tic-Tac-Toe. first player to start is x");
+		console.log("To make a make as follow: x1 to go to first column");
+	},
 
 	getInput: function()
 	{	
-	
 		var move = 0;
-		console.log('Player ' + player + 'your move, enter your row column:');
+		
+		console.log('Player ' + player + 'your move, enter your move:');
 		
 		gameLogic.valitadeInput(move);
 		
-		return drawMove(player, move);
-		
-
+		return drawMove(player, move);	
 	},
+
 	drawMove: function(player, move)
 	{	
 		
 		gameLogic.checkIfMoveIsLeagal(move);
-		gameLogic.victoryCheck(gameboard);
+		if(gameLogic.victoryCheck(gameboard) === true)
+		{
+			gameStatus = true;
+			console.log("Congrats!" + player + "you win the game");
+		}
+		
+		checkGame(gameStatus);
 		gameLogic.makeAMove(gameboard, move);
-
-		/// makeAMove: function(gameState, move)
+		
 		turnCount++;
-		/// checkIfMoveIsLeagal
+	
 		if(player === 'x')
 		{	
-			//makeAMove: function(gameState, move){
 			switchPlayer(player);
-			return drawMove('o');
+			return drawMove('o', move);
 		}
 		else(player === 'o')
 		{	
-			// makeAMove: function(gameState, move){
 			switchPlayer(player);
-			return drawMove('x');		
+			return drawMove('x', move);		
 		}	
 		//victoryCheck
 		if(turnCount > 9)
 		{
 			console.log("Stalemate");
-			return refreshBoard();
+			checkGame(gameStatus);
 		}
 
 	},
