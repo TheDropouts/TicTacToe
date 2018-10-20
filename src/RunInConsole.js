@@ -27,5 +27,5 @@ function RecursiveReadUserInput(){
 		}
 
 		RecursiveReadUserInput();
-	})
-}
+	}
+};

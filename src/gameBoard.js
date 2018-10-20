@@ -21,6 +21,9 @@ module.exports = {
 			
 		return '\n' + '' + row1 + '' + row2 + '' + row3;
 	},
+	upDateGameBoard: function (move){
+		return true;
+	},
 	/* This function works */	
 	switchPlayer: function(player)	
 	{		
