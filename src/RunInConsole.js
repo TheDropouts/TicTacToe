@@ -4,19 +4,23 @@ const readline = require('readline').createInterface({
 });
 
 exports.Run = function(){
-	var isGameOver = false;
-	while(!isGameOver) {
-		var input = ReadUserInput();
-		isGameOver = sendInUserInput(input);
-	}
+	RecursiveReadUserInput();
 };
 
-function ReadUserInput(){
-		readline.question('Write in youre move ', (move) => { readline.close(); })
-		return "move";
+function RecursiveReadUserInput(){
+	readline.question( /* Here comes current game state */ "Please enter youre move \n" ,
+	function (line){
+		
+		// A valid imput
+		if( line.length === 2){
 
+		}
+		else if ( line == "exit" ){
+			return readline.close();
+		}
+		else {
+			console.log("invalid input");
+		}
+		RecursiveReadUserInput();
+	})
 }
-function sendInUserInput(){
-		return false;
-}
-
