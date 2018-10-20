@@ -2,15 +2,15 @@ const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 });
-const GameLogic = require('./gameLogic')
-
+const GameLogic = require('./gameLogic');
+const GameBoard = require('./gameBoard');
 
 exports.Run = function(){
 	RecursiveReadUserInput();
 };
 
 function RecursiveReadUserInput(){
-	readline.question( /* Here comes current game state */ "Please enter youre move \n" ,
+	readline.question( GameBoard.drawBoard() + "Please enter youre move \n" ,
 	function (line){
 	
 		try{	

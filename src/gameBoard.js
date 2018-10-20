@@ -19,7 +19,7 @@ module.exports = {
 		var row2 = gameboard[3] + ' | ' + gameboard[4] + ' | ' + gameboard[5] + '\n';
 		var row3 = gameboard[6] + ' | ' + gameboard[7] + ' | ' + gameboard[8] + '\n';
 			
-		return (console.log('\n' + '' + row1 + '' + row2 + '' + row3));
+		return '\n' + '' + row1 + '' + row2 + '' + row3;
 	},
 	/* This function works */	
 	switchPlayer: function(player)	
