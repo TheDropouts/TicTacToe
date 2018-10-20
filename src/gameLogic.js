@@ -18,7 +18,7 @@ module.exports = {
 			gameState[ parseInt(move[1]) - 1 ] = move[0];
 			return gameState;
 		}
-		return false;
+		return gameState;
 	},
 	checkIfMoveIsLeagal: function( field ){
 		if(field == 'x' || field == 'o'){

@@ -9,23 +9,24 @@ exports.Run = function(){
 	RecursiveReadUserInput();
 };
 
-function RecursiveReadUserInput(){
+function RecursiveReadUserInput() {
 	readline.question( GameBoard.drawBoard() + "Please enter youre move \n" ,
-	function (line){
+	function (line) {
 	
-		try{	
+		try {	
 			if ( line == "exit" ){
 				return readline.close();
 			}
 			// A valid imput
 			else{
 				GameLogic.valitadeInput(line);
+				GameBoard.upDateGameBoard(line);
 			}
 		}
-		catch (e){
+		catch (e) {
 			console.log(e);
 		}
 
 		RecursiveReadUserInput();
-	}
-};
+	})
+}

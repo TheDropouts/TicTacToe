@@ -22,6 +22,7 @@ module.exports = {
 		return '\n' + '' + row1 + '' + row2 + '' + row3;
 	},
 	upDateGameBoard: function (move){
+	    gameboard = gameLogic.makeAMove( gameboard, move );	
 		return true;
 	},
 	/* This function works */	
