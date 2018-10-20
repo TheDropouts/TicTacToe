@@ -2,6 +2,8 @@ const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 });
+const GameLogic = require('./gameLogic')
+
 
 exports.Run = function(){
 	RecursiveReadUserInput();
@@ -10,17 +12,20 @@ exports.Run = function(){
 function RecursiveReadUserInput(){
 	readline.question( /* Here comes current game state */ "Please enter youre move \n" ,
 	function (line){
-		
-		// A valid imput
-		if( line.length === 2){
+	
+		try{	
+			if ( line == "exit" ){
+				return readline.close();
+			}
+			// A valid imput
+			else{
+				GameLogic.valitadeInput(line);
+			}
+		}
+		catch (e){
+			console.log(e);
+		}
 
-		}
-		else if ( line == "exit" ){
-			return readline.close();
-		}
-		else {
-			console.log("invalid input");
-		}
 		RecursiveReadUserInput();
 	})
 }
