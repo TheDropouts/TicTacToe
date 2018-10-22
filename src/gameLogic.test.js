@@ -20,7 +20,7 @@ it("Should throw an error with Error code 'bb is not a valid input only acceptab
 	expect(tryInvalid).toThrowError("0x is not a valid input only acceptable input is on the form x1 or o1");
 });
 it("should return x1", () => {
-	expect(gameLogic.valitadeInput("X1")).toBe(" 42 ");
+	expect(gameLogic.valitadeInput("X1")).toBe("x1");
 });
 
 it("should return ['x','2','3','4','5','6','7','8','9']", () => {
