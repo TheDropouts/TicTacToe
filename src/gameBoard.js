@@ -10,27 +10,46 @@ var player = 'x';
 module.exports = {	
 
 	/* This function works,  */	
+	greetGame: function()
+	{	
+		console.log('\n');
+		console.log("Welcome to the game of Tic-Tac-Toe. first player to start is x");
+		console.log("To make a make as follow: x1 to go to first column");
+	},
+
 	drawBoard: function()
-	{		
+	{	
+		console.log("--------------------------------------");
+		console.log("Player " + player + " It's your turn ");	
 		var row1 = gameboard[0]	+ ' | ' + gameboard[1] + ' | ' + gameboard[2] + '\n';
 		var row2 = gameboard[3] + ' | ' + gameboard[4] + ' | ' + gameboard[5] + '\n';
 		var row3 = gameboard[6] + ' | ' + gameboard[7] + ' | ' + gameboard[8] + '\n';
 			
-		return '\n' + '' + row1 + '' + row2 + '' + row3;
+		return '\n' + '' + row1 + '' + row2 + '' + row3 + '\n';
 	},
+
 	upDateGameBoard: function (move){
 	    gameboard = gameLogic.makeAMove( gameboard, move );	
+	    turnCount++;
 		return true;
 	},
 	/* This function works */	
 	switchPlayer: function(player)	
 	{		
 		if(player === 'x'){
-			return(player = 'o');
+			
+			player = 'o';	
 		}
 		else{
-			return(player = 'x');
+			
+			player = 'x';	
 		}
+		return player;
+	},
+
+	getPlayer:function()
+	{
+		return player;
 	},
    	/* This function works */
    	checkGame: function(gameStatus)
@@ -44,72 +63,39 @@ module.exports = {
 		}
 	},
 
-	greetGame: function()
-	{	
-		console.log("Welcome to the game of Tic-Tac-Toe. first player to start is x");
-		console.log("To make a make as follow: x1 to go to first column");
-	},
 
-	getInput: function()
+	getWinner: function(player, gameboard)
 	{	
-		var move = 0;
-		
-		console.log('Player ' + player + 'your move, enter your move:');
-		
-		gameLogic.valitadeInput(move);
-		
-		return drawMove(player, move);	
-	},
-
-	drawMove: function(player, move)
-	{	
-		
-		gameLogic.checkIfMoveIsLeagal(move);
 		if(gameLogic.victoryCheck(gameboard) === true)
 		{
 			gameStatus = true;
-			console.log("Congrats!" + player + "you win the game");
+			return console.log("Congrats!" + player + "you win the game");
 		}
-		
-		checkGame(gameStatus);
-		gameLogic.makeAMove(gameboard, move);
-		
-		turnCount++;
-	
-		if(player === 'x')
-		{	
-			switchPlayer(player);
-			return drawMove('o', move);
-		}
-		else(player === 'o')
-		{	
-			switchPlayer(player);
-			return drawMove('x', move);		
-		}	
-		//victoryCheck
-		if(turnCount > 9)
+		else if(turnCount > 9)
 		{
-			console.log("Stalemate");
-			checkGame(gameStatus);
+			
+			gameStatus = true;
+			return console.log("Stalemate");
 		}
 
 	},
 
-	endGame: function(inputParameter)
+	endGame: function(gameStatus)
 	{	
 		// victoryCheck
-		if(inputParameter === true)
+		if(gameStatus === true)
 		{
-			console.log('Winner is' + player);
-			gameOver = true;
-			return refreshBoard();
+			console.log("Game is being restarted");
+			gameStatus = false;
+			gameboard =	[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+			turnCount = 1;
+			Player = 'x';
+			
+			return true;
+		}
+		else{
+			return false; 
 		}
 	},
 
-	refreshBoard: function()
-	{
-		gameboard =	[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-		turnCount = 1;
-		gameStatus = false;
-	}
 };
