@@ -35,12 +35,12 @@ it("should return ['1','2','3','4','5','6','7','8','x']", () => {
 	expect(gameLogic.makeAMove(['1','2','3','4','5','6','7','8','9'], 'x9' )).toEqual(['1','2','3','4','5','6','7','8','x']);
 });
 
-it("should return false", () => {
-	expect(gameLogic.makeAMove(['1','2','3','4','5','6','7','8','x'], 'o9' )).toEqual(false);
+it("should return ['1','2','3','4','5','6','7','8','x']", () => {
+	expect(gameLogic.makeAMove(['1','2','3','4','5','6','7','8','x'], 'o9' )).toEqual(['1','2','3','4','5','6','7','8','x']);
 });
 
-it("should return false", () => {
-	expect(gameLogic.makeAMove(['1','2','3','4','5','6','7','8','x'], 'x9' )).toEqual(false);
+it("should return ['1','2','3','4','5','6','7','8','x']", () => {
+	expect(gameLogic.makeAMove(['1','2','3','4','5','6','7','8','x'], 'x9' )).toEqual(['1','2','3','4','5','6','7','8','x']);
 });
 
 it("should return true", () => {
