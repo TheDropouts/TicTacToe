@@ -13,7 +13,6 @@ module.exports = {
 		return gameboard;
 	},
 
-
 	greetGame: function()
 	{	
 		console.log('\n');
@@ -33,7 +32,7 @@ module.exports = {
 
 	upDateGameBoard: function (move){
 		
-		runningGame.checkGame(gameStatus);
+		//runningGame.checkGame(gameStatus);
 		
 		var checkInput = gameLogic.validateString(move);
 	    if(checkInput === false)
@@ -44,7 +43,7 @@ module.exports = {
 	    else if(gameStatus === true)
 	    {	
 	    	console.log("Winner");
-	    	runningGame.checkGame(gameStatus);
+	    	//runningGame.checkGame(gameStatus);
 	    	return false;
 	    }
 	    
