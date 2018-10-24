@@ -8,25 +8,19 @@ var gameStatus = false;
 
 
 module.exports = {	
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-	/* This function works, needs a test */	
-=======
-=======
->>>>>>> 1254f73eb382a2daed75aa83e875c55f50d2907e
 	sendGameStatus: function(){
 		return gameboard;
 	},
-	/* This function works,  */	
->>>>>>> 1254f73eb382a2daed75aa83e875c55f50d2907e
+
+
 	greetGame: function()
 	{	
 		console.log('\n');
 		console.log("Welcome to the game of Tic-Tac-Toe. first player to start is x");
 		console.log("To make a make as follow: 1 to go to first column");
 	},
-	/* This function works, and is tested  */	
+	
 	drawBoard: function()
 	{	
 		
@@ -83,12 +77,12 @@ module.exports = {
 			gameStatus = true;
 			return console.log("Congrats!" + gameboard[0] + "you win the game");
 		}
-		else if(turnCount > 9)
+		/*else if(turnCount > 9)
 		{
 			
 			gameStatus = true;
 			return console.log("Stalemate");
-		}
+		}*/
 
 	},
 
