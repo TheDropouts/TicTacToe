@@ -2,8 +2,11 @@
 //StartGame.Run();
 
 const express = require("express");
+const path = require("path");
 const app = express();
 const api = require("./src/server/api");
+
+app.use(express.static(path.join(__dirname, "dist")));
 
 // For all queries to localhost:3000/api/...
 // use the API router (see below)
