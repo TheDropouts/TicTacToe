@@ -5,7 +5,7 @@ router.get("/gamestate", (req, res) => {
   res.status(200).send( game.sendGameStatus() );
 });
 router.get("/makeAMove/:move", (req, res) => {
-  res.status(200).send( game.makeAMove(move) );
+  res.status(200).send( game.makeAMove(req.params) );
 });
 router.get("/reset", (req, res) => {
   res.status(200).send( game.resetGameBoard() );

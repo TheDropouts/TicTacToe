@@ -1,17 +1,20 @@
-var	gameboard = function(){
-	return [1, 2, 3, 4, 5, 6, 7, 8, 9];
-}
+var fs = require('fs');
+const gameLogic = require('./gameLogic')
+var	gameboard = [1,2,3,4,5,6,7,8,9]; 
 
 module.exports = {	
 
 	sendGameStatus: function(){
-		return gameboard();
+		return gameboard;
 	},
-	MakeAMove: function(move){
-		if( gameLogic.validateString(move) ){
-			move = gameLogic.switchPlayer() + move;
-			gameBoard = gameLogic.makeAMove( gameBoard, move );	
+	makeAMove: function(input){
+		console.log(input.move);
+
+		if( gameLogic.validateString(input.move) ){
+			input = gameLogic.switchPlayer() + input.move;
+			gameboard = gameLogic.makeAMove( gameboard, input );	
 		}
+		return gameboard;
 	},
 	resetGameBoard:  function(){
 		gameboard = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -19,11 +22,5 @@ module.exports = {
 	},
 	victoryCheck: function(){
 		return gameLogic.victoryCheck( gameState );
-	},
-	greetGame: function()
-	{	
-		console.log('\n');
-		console.log("Welcome to the game of Tic-Tac-Toe. first player to start is x");
-		console.log("To make a make as follow: 1 to go to first column");
 	}
 }
