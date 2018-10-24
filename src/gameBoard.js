@@ -9,9 +9,12 @@ var gameStatus = false;
 
 module.exports = {	
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	/* This function works, needs a test */	
 =======
+=======
+>>>>>>> 1254f73eb382a2daed75aa83e875c55f50d2907e
 	sendGameStatus: function(){
 		return gameboard;
 	},
