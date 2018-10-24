@@ -1,4 +1,8 @@
+var player = 0; 
+
 module.exports = {
+
+	/* ## We aren't using validateInput anymore */
 	valitadeInput: function(input){
 		if(input.length != 2){
 			throw input + " is not a valid input only acceptable input is on the form x1 or o1";
@@ -12,6 +16,36 @@ module.exports = {
 		}
 		return input.toLowerCase();
 	},
+
+	validateString: function(move)
+	{
+		var validationMask = /[^\d+$]/;
+	    if(move > 9	||	move <= 0)
+	    {	
+	    	
+	    	return false;
+	    }
+	   	else if(validationMask.test(move))
+	    {
+	    	return false;
+	    }
+	    else
+	    {
+	    	return true;
+	    }
+	},
+
+	switchPlayer: function()
+	{	
+		player++;
+		if(player % 2 === 0){
+			return 'o';
+		}
+		else{
+			return 'x';
+		}
+	},
+
 	makeAMove: function(gameState, move){
 
 		if ( gameState[ parseInt(move[1]) - 1 ]  != 'x' && gameState[ parseInt(move[1]) - 1 ] != 'o' ){
