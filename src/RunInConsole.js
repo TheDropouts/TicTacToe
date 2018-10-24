@@ -22,12 +22,10 @@ function RecursiveReadUserInput() {
 			// A valid imput
 			else{
 				
-				var currPlayer = GameBoard.getPlayer();
-				GameLogic.valitadeInput(line);
+				
+				//GameLogic.valitadeInput(line);
 				GameBoard.upDateGameBoard(line);
-				GameBoard.switchPlayer(currPlayer);
-				console.log(currPlayer);		
-
+				
 			}
 		}
 		catch (e) {

@@ -24,9 +24,6 @@ it("It should return the gameboard if the gamestatus is false ", () => {
 	expect(gameBoard.checkGame(false)).toEqual(false);
 });
 
-
-
-
 it("It Should return false", ()	=> {
 	expect(gameBoard.upDateGameBoard('x1')).toBe(true);
 });
