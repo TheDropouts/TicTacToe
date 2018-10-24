@@ -38,7 +38,7 @@ module.exports = {
 		var checkInput = gameLogic.validateString(move);
 	    if(checkInput === false)
 	    {	
-	    	console.log("Illegal move");
+	    	//console.log("Illegal move");
 	    	return false;
 	    }
 	    else if(gameStatus === true)
