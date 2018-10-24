@@ -1,6 +1,15 @@
 var fs = require('fs');
 const gameLogic = require('./gameLogic')
-var	gameboard = [1,2,3,4,5,6,7,8,9]; 
+var	gameboard = [1,2,3,4,5,6,7,8,9];
+var moveCounter = function(){	
+	var xoro = 0;
+	for(var i = 0; i < 9; i++){
+		if( gameboard[i] == 'x' || gameboard[i] == 'o' ){
+			xoro++;
+		}
+	}
+	return xoro;
+}; 
 
 module.exports = {	
 
@@ -8,10 +17,9 @@ module.exports = {
 		return gameboard;
 	},
 	makeAMove: function(input){
-		console.log(input.move);
 
 		if( gameLogic.validateString(input.move) ){
-			input = gameLogic.switchPlayer() + input.move;
+			input = gameLogic.switchPlayer(moveCounter()) + input.move;
 			gameboard = gameLogic.makeAMove( gameboard, input );	
 		}
 		return gameboard;
@@ -21,6 +29,6 @@ module.exports = {
 		gameLogic.player = 0;
 	},
 	victoryCheck: function(){
-		return gameLogic.victoryCheck( gameState );
+		return gameLogic.victoryCheck( gameboard );
 	}
 }

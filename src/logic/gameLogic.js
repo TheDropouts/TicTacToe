@@ -1,5 +1,3 @@
-var player = 0; 
-
 module.exports = {
 
 	/* ## We aren't using validateInput anymore */
@@ -35,14 +33,13 @@ module.exports = {
 	    }
 	},
 
-	switchPlayer: function()
+	switchPlayer: function(counter)
 	{	
-		player++;
-		if(player % 2 === 0){
-			return 'o';
+		if(counter % 2 === 0){
+			return 'x';
 		}
 		else{
-			return 'x';
+			return 'o';
 		}
 	},
 
