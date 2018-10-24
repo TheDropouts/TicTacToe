@@ -8,8 +8,15 @@ var gameStatus = false;
 
 
 module.exports = {	
+<<<<<<< HEAD
 
 	/* This function works, needs a test */	
+=======
+	sendGameStatus: function(){
+		return gameboard;
+	},
+	/* This function works,  */	
+>>>>>>> 1254f73eb382a2daed75aa83e875c55f50d2907e
 	greetGame: function()
 	{	
 		console.log('\n');
