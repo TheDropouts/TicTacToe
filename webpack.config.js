@@ -12,5 +12,12 @@ module.exports = {
 			template: "./src/client/index.html"
 		 })
 	
-	]
+	],
+	devServer:{
+		port: 5000,
+		open: true,
+		proxy: {
+			"/api" : "http://localhost::3000"
+		}
+	}
 };
