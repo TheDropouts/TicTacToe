@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "Start": "node server",
+    "build": "webpack",
     "Build": "webpack"
   },
   "repository": {
