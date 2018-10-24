@@ -9,7 +9,9 @@ var player = 'x';
 
 
 module.exports = {	
-
+	sendGameStatus: function(){
+		return gameboard;
+	},
 	/* This function works,  */	
 	drawBoard: function()
 	{	
