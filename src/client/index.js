@@ -7,15 +7,25 @@ window.onload=function(){
 		
 		var cellNumber = table[i].id;
 		table[i].addEventListener("click", function(j){
-			$.get( "api///makeAMove/" + $(this).attr('id'), function( data ) {
-				console.log($(this).attr('id'));
+			$.get( "api/makeAMove/" + $(this).attr('id'), function( data ) {
+				ChangeTableVal(data);
 			});
+			$.get( "api//victoryCheck", function( data ) {
+				if(data === true){
+					alert("You win game now");
+				}				
+			});
+
 		});
 	}
 
-// búa til function sem getu hverri cellu takka og hver af þessum tökkum getur kallað á api
-// eina sem hver takki þarf að eiga er upplýsingar um hvaða númer er á honum
-
+	$("#reset").click(function(){
+		$.get( "api/reset", function() {
+			$.get( "api//gamestate", function( data ) {
+				ChangeTableVal(data);
+			});
+		});
+	});
 	$.get( "api//gamestate", function( data ) {
 
 		ChangeTableVal(data);
