@@ -7,10 +7,9 @@ const GameBoard = require('./gameBoard');
 
 exports.Run = function(){
  	GameBoard.greetGame();
- 	
 	RecursiveReadUserInput();
 };
-
+/*Ask for input Recursively, wait for input and continue in the gamestate */
 function RecursiveReadUserInput() {
 	readline.question( GameBoard.drawBoard() + "Please enter your move \n" ,
 	function (line) {
@@ -23,6 +22,7 @@ function RecursiveReadUserInput() {
 			else{
 				
 				
+				// We don't use valitadeInput anymore, validation is done in another function*/
 				//GameLogic.valitadeInput(line);
 				GameBoard.upDateGameBoard(line);
 				
