@@ -25,6 +25,8 @@ This will run the application as localhost server on this url :<br/>
 http://localhost:3000 <br/>
 
 
+## Heroku deployment
+
 
 How to install and run the program locally <br/>
 Skrefin hér til að setja upp local web-app
