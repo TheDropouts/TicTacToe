@@ -26,7 +26,9 @@ it("should return x1", () => {
 it("should return x", () => {
 	expect(gameLogic.switchPlayer(2)).toBe("x");
 });
-
+it("should return o", () => {
+	expect(gameLogic.switchPlayer(1)).toBe("o");
+});
 it("should return true if input is 1,2,3,4,5,6,7,8,9", () => {
 	expect(gameLogic.validateString(1)).toBe(true);
 });

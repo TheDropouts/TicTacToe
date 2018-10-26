@@ -42,7 +42,7 @@ module.exports = {
 			
 		return '\n' + '' + row1 + '' + row2 + '' + row3 + '\n';
 	},
-
+	/* Main controller for game stages */
 	upDateGameBoard: function (move){
 		
 		var checkInput = gameLogic.validateString(move);
@@ -56,8 +56,8 @@ module.exports = {
 	    	console.log("Gameover!");
 	    	return false;
 	    }
-
-	    move = gameLogic.switchPlayer() + move;
+		
+	    move = gameLogic.switchPlayer(move) + move;
     	console.log("Player " + move[0]  +	"	It's your turn");
 
 	    gameboard = gameLogic.makeAMove(gameboard, move);
@@ -67,7 +67,7 @@ module.exports = {
 	 
 		return true;
 	},
-
+	/* Not using this function */
    	checkGame: function(gameStatus)
 	{	
 		if(gameStatus === true){
@@ -78,7 +78,7 @@ module.exports = {
 			return false;
 		}
 	},
-
+    /* Not using this function */ 
 	getWinner: function(gameboard)
 	{	
 		if(gameLogic.victoryCheck(gameboard) === true)
@@ -94,7 +94,7 @@ module.exports = {
 		}*/
 
 	},
-
+	/* Not using this function */
 	endGame: function(gameStatus)
 	{	
 		// victoryCheck
