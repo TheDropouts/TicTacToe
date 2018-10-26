@@ -1,5 +1,5 @@
 # TicTacToe
-===========
+
 The Game
 Tic Tac Toe is a two player game. The first player plays with X figure and the second player plays with O figure. 
 Player X always starts the game. The game board is a grid of squares 3x3. 
