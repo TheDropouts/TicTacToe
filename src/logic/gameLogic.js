@@ -42,6 +42,19 @@ module.exports = {
 			return 'o';
 		}
 	},
+	/* Get the current player */
+	getCurrentPlayer: function(currPlayer)
+	{
+		if(currPlayer === 'o')
+		{
+			return 'x';
+		}
+		else
+		{
+			return 'o';
+		}
+		
+	},
 	/* Make a move on the gameboard */
 	makeAMove: function(gameState, move){
 

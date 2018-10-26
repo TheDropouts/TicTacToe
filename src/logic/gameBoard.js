@@ -5,7 +5,7 @@ var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 var runningGame = require('./gameBoard');			
 var gameStatus = false;
-
+var player = 'x';
 
 module.exports = {	
 
@@ -54,11 +54,14 @@ module.exports = {
 	    else if(gameStatus === true)
 	    {	
 	    	console.log("Gameover!");
+			console.log("Player " + player + " is the winner ");
 	    	return false;
 	    }
 		
+		console.log("Player " + player +   "  it's your turn");
+		player = gameLogic.getCurrentPlayer(player);
 	    move = gameLogic.switchPlayer(move) + move;
-    	console.log("Player " + move[0]  +	"	It's your turn");
+    	
 
 	    gameboard = gameLogic.makeAMove(gameboard, move);
 
