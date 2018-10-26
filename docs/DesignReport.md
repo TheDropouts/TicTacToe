@@ -26,7 +26,7 @@ In order to start a new game, press the “reset” button.
 
 The inital game stages are as follows:
 
-| Tick    | Tac   | Toe   |
+| Tic    | Tac   | Toe   |
 | ------- |:-----:| -----:|
 |    1    |   2   |   3   |
 |    4    |   5   |   6   |
@@ -37,7 +37,7 @@ The inital game stages are as follows:
 Player X starts the game 
 Input: 1 
 
-| Tick    | Tac   | Toe   |
+| Tic    | Tac   | Toe   |
 | ------- |:-----:| -----:|
 |    x    |   2   |   3   |
 |    4    |   5   |   6   |
