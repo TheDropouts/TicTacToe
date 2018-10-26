@@ -2,8 +2,15 @@
 
 ## Softwares you will need:
 
-You will need a git to be able to write commands to install and run TicTacToe.<br/>
+You will need a Git to be able to write commands to install and run TicTacToe.<br/>
 You can download the latest version for desired operating system here [Git](https://git-scm.com/downloads).
+
+You will need Node.js package manager. You ncan get the latest version of Node.js here [Node.js](https://nodejs.org/en/) package manager.
+
+Javascript is an interpreted language, not a compiled one such as Java or C#. So for today's exercise there is no need to setup any
+compiler, but to manage dependencies that we will use (additional libraries) we will use NPM (https://www.npmjs.com/) (Node
+(https://nodejs.org/en/) package manager). In addition to install NPM (https://www.npmjs.com/), Node (https://nodejs.org/en/) also gives us
+a Javascript runtime, so we can run our code outside of a browser.
 
 Our application is hosted as an open repository on github.com. <br/>
 You can access it here : https://github.com/TheDropouts
