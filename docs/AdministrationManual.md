@@ -2,7 +2,7 @@
 
 ## Softwares
 
-* You will need a Git to be able to write commands to install and run TicTacToe.<br/>
+* You will need a Git to be able to write commands.<br/>
 You can download the latest version for desired operating system clicking on this link: [Git](https://git-scm.com/downloads)</li>
 
 * You will need Node package manager.<br/>
