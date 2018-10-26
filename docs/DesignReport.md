@@ -1,4 +1,4 @@
-## TicTacToe Design
+# TicTacToe Design
 
 ## Introduction
 
