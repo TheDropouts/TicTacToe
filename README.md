@@ -13,3 +13,8 @@ Objective: Lateterm assignment for Software Engineering. We have to implement "T
 Design Written in JavaScript and deployed as an Web-App.
 
 Team TheDroputs
+
+The game is both playable in a console and is deployed through an web-app 
+
+https://the-dropouts.herokuapp.com/
+
