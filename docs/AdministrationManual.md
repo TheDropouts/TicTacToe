@@ -32,14 +32,6 @@ http://localhost:3000 <br/>
 
 After following all the steps above you can can access the Web-App here: [TicTacToe](https://the-dropouts.herokuapp.com/)
 
-## Heroku deployment
-Tic Tac Toe game is also available online through Heroku app. <br/>
-Here is the link : https://the-dropouts.herokuapp.com/
-
-
-How to install and run the program locally <br/>
-Skrefin hér til að setja upp local web-app
-
-
-How to run the game in a console. <br/>
-Skrefin hér til að keyra upp leikinn í console
+## Testing
+If you want to run unit tests you simply need to open git terminal and make sure that you are located in the application folder.<br/>
+Type the following command `npm test`.
