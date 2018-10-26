@@ -26,6 +26,8 @@ http://localhost:3000 <br/>
 
 
 ## Heroku deployment
+Tic Tac Toe game is also available online through Heroku app. <br/>
+Here is the link : https://the-dropouts.herokuapp.com/
 
 
 How to install and run the program locally <br/>
