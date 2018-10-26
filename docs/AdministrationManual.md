@@ -10,8 +10,8 @@ You can get the latest version of Node here [Node.js](https://nodejs.org/en/).
 
 ## Cloning the application
 
-Our application is hosted as an open repository on github.com. <br/>
-You can access it here : [TheDropouts](https://github.com/TheDropouts)<br/>
+The application is hosted as an open repository on github.com. <br/>
+You can access it here: [TheDropouts](https://github.com/TheDropouts)<br/>
 Open up git terminal and select a destination for the application, example command `cd Desktop` (if you want it located on your desktop).
 After you have found a desired destination for the application type or copy this command in git terminal `git clone https://github.com/TheDropouts/TicTacToe.git`<br/>
 You can also go to [TheDropouts](https://github.com/TheDropouts) and download a zipfile 
