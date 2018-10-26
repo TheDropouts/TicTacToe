@@ -19,11 +19,17 @@ In order to start a new game, press the “reset” button.
 
 The inital game stages are as follows:
 
+
+
 *Welcoming message*
 
 Player X starts the game 
 Input: 1 
-
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 1 | 2 | 3 
 4 | 5 | 6
 7 | 8 | 9
