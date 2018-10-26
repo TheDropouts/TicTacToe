@@ -1,15 +1,23 @@
 # Administration manual : TicTacToe
+
+## Softwares you will need
+
+1. You will need a Git to be able to write commands to install and run TicTacToe.<br/>
+You can download the latest version for desired operating system here [Git](https://git-scm.com/downloads).
+
+2. You will need Node package manager.<br/>
+You can get the latest version of Node here [Node.js](https://nodejs.org/en/).
+
+## Cloning the repository/project
+
 Our application is hosted as an open repository on github.com. <br/>
-You can access it here : https://github.com/TheDropouts
-
-In order to deploy and run our application you need to download nodejs to your computer.<br/>
-You can find it here : https://www.npmjs.com/
-
-If you are using your terminal/console can clone the repository to your computer by running 
-the native git command _git clone_ <br/>
-Like this : git clone https://github.com/TheDropouts/TicTacToe <br/>
-Or you can use https://github.com/TheDropouts/TicTacToe and download a zipfile 
+You can access it here : [TheDropouts](https://github.com/TheDropouts)<br/>
+Open up git terminal and select a destination for the repository, example command `cd Desktop` (if you want it located on your desktop).
+After you have found a desired destination type or copy this command in git terminal `git clone https://github.com/TheDropouts/TicTacToe.git`<br/>
+You can also go to [TheDropouts](https://github.com/TheDropouts) and download a zipfile 
 containing the application.
+
+
 
 The game is also deployed as an Web-App. <br/>
 Which you can access here : https://the-dropouts.herokuapp.com/
