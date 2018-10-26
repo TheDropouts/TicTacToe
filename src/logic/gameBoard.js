@@ -36,7 +36,7 @@ module.exports = {
 	{	
 		console.log('\n');
 		console.log("Welcome to the game of Tic-Tac-Toe");
-		console.log("To make a make as follow: 1 to go to first column");
+		console.log("To make a make input as follow:1 to go to first column");
 		console.log("To quit the game at anytime, write exit or ctrl + c");
 		console.log("Player x starts");
 	},
@@ -54,7 +54,8 @@ module.exports = {
 	upDateGameBoard: function (move){
 		
 		if(gameStatus === false)
-		{
+		{	
+			console.log('\n');
 			console.log("Player " + player + " it's your turn ");
 		}
 		
@@ -75,7 +76,8 @@ module.exports = {
 		
 		if(gamecount > 8)
 		{
-		  console.log( "Draw!");
+		  console.log("---- Draw! -----");
+		  gameStatus = true;
 		  return false;
 		}
 	    
@@ -83,8 +85,10 @@ module.exports = {
 		
 		if(gameStatus === true)
 	    {	
-	    	console.log("---- Gameover! -----");
+			console.log("Oh sorry!");
+			console.log("---- Gameover! -----");
 			console.log("Player " + player + " is the winner ");
+
 	    	return false;
 	    }
 		
@@ -92,15 +96,30 @@ module.exports = {
 	 
 		return true;
 	},
+	/* Function to end the run of the console */ 
+	endGame: function(runningGame)
+	{	
+		var endGame = gameStatus;
+		if(endGame === runningGame)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+		
+	},
+
+	
 	/* Not using this function */
    	checkGame: function(gameStatus)
 	{	
-		if(gameStatus === true){
-			console.log("Game over!");
-			return true;
+		if(gameStatus === false){
+			return false;
 		}
 		else{
-			return false;
+			return true;;
 		}
 	},
     /* Not using this function */ 
@@ -119,23 +138,6 @@ module.exports = {
 		}*/
 
 	},
-	/* Not using this function */
-	endGame: function(gameStatus)
-	{	
-		// victoryCheck
-		if(gameStatus === true)
-		{
-			console.log("Game is being restarted");
-			gameStatus = false;
-			gameboard =	[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-			turnCount = 1;
-			Player = 'x';
-			
-			return true;
-		}
-		else{
-			return false; 
-		}
-	},
+	
 
 };
