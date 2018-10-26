@@ -36,10 +36,10 @@ module.exports = {
 	switchPlayer: function(counter)
 	{	
 		if(counter % 2 === 0){
-			return 'o';
+			return 'x';
 		}
 		else{
-			return 'x';
+			return 'o';
 		}
 	},
 	/* Make a move on the gameboard */
