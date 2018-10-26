@@ -19,11 +19,11 @@ In order to start a new game, press the “reset” button.
 
 The inital game stages are as follows:
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    1    |   2   |   3   |
+|    4    |   5   |   6   |
+|    7    |   8   |   9   |
 
 *Welcoming message*
 
