@@ -17,7 +17,7 @@ After you have found a desired destination for the application type or copy this
 You can also go to [TheDropouts](https://github.com/TheDropouts) and download a zipfile 
 containing the application.
 
-##Web-App
+## Web-App
 
 To be able to deploy and run our application you need to install npm to your git terminal/console.<br/>
 You need to be located in the folder you have downloaded the game into.<br/>
