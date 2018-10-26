@@ -10,7 +10,7 @@ In order to start a new game, press the “reset” button.
 
 Objective: Lateterm assignment for Software Engineering. We have to implement "Tic-Tac-Toe".
 
-Design Written in JavaScript and deployed as an Web-App.
+Design: Written in JavaScript and deployed as an Web-App.
 
 Team: The Dropouts
 
