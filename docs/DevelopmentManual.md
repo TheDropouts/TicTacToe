@@ -1,6 +1,6 @@
 # Development Manual
 
-## Tools required
+## Softwares required
 
 1. You will need a Git to be able to write commands.<br/>
 You can download the latest version for desired operating system here [Git](https://git-scm.com/downloads)
