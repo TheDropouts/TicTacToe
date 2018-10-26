@@ -3,14 +3,14 @@
 ## Softwares
 
 * You will need a Git to be able to write commands.<br/>
-You can download the latest version for desired operating system clicking on this link: [Git](https://git-scm.com/downloads)</li>
+You can download the latest version for desired operating system clicking on this link: [Git](https://git-scm.com/downloads)
 
 * You will need Node package manager.<br/>
 You can get the latest version of Node clicking on this link: [Node.js](https://nodejs.org/en/)
 
 ## Cloning the application
 
-The application is hosted as an open repository on github.com. <br/>
+The application is hosted as an open repository on github.com<br/>
 You can access it here: [TheDropouts](https://github.com/TheDropouts)<br/>
 Open up git terminal and select a destination for the application, example command `cd Desktop` (if you want it located on your desktop).
 After you have found a desired destination for the application type or copy this command in git terminal `git clone https://github.com/TheDropouts/TicTacToe.git`<br/>
@@ -35,3 +35,7 @@ After following all the steps above you can can access the Web-App here: [TicTac
 ## Testing
 If you want to run unit tests you simply need to open git terminal and make sure that you are located in the application folder.<br/>
 Type the following command `npm test`
+
+## Latest Version
+If you want the latest version of the application, you need to be use Git and access the root of the application.
+When in the root of the application you can type `git pull origin master` that will give you the latest version of the application.
