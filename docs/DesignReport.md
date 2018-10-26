@@ -46,7 +46,7 @@ Input: 1
 Player O it's your turn!
 Input: 4
 
-| Tick    | Tac   | Toe   |
+| Tic    | Tac   | Toe   |
 | ------- |:-----:| -----:|
 |    x    |   2   |   3   |
 |    o    |   5   |   6   |
@@ -55,7 +55,7 @@ Input: 4
 Player X it's your turn!
 Input: B
 
-| Tick    | Tac   | Toe   |
+| Tic    | Tac   | Toe   |
 | ------- |:-----:| -----:|
 |    x    |   2   |   3   |
 |    o    |   5   |   6   |
@@ -64,7 +64,7 @@ Input: B
 Illegal Move!
 Input: 2
 
-| Tick    | Tac   | Toe   |
+| Tic    | Tac   | Toe   |
 | ------- |:-----:| -----:|
 |    x    |   x   |   3   |
 |    o    |   5   |   6   |
@@ -73,7 +73,7 @@ Input: 2
 Player O it's your turn!
 Input: 7
 
-| Tick    | Tac   | Toe   |
+| Tic    | Tac   | Toe   |
 | ------- |:-----:| -----:|
 |    x    |   x   |   3   |
 |    o    |   5   |   6   |
@@ -84,7 +84,7 @@ Input: 7
 Player X it's your turn!
 Input: 3
 
-| Tick    | Tac   | Toe   |
+| Tic    | Tac   | Toe   |
 | ------- |:-----:| -----:|
 |    x    |   x   |   x   |
 |    o    |   5   |   6   |
@@ -94,7 +94,7 @@ Input: 3
 Player O it's your turn!
 Input: 5
 
-| Tick    | Tac   | Toe   |
+| Tic    | Tac   | Toe   |
 | ------- |:-----:| -----:|
 |    x    |   x   |   x   |
 |    o    |   5   |   6   |
