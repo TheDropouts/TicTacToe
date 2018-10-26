@@ -3,26 +3,27 @@
 Our first attempt was to make the game as simple as possible, we wrote it for a console, later on we decided to deploy it also as an web-app. The game is simple and only allows two players to play it at the same computer at the same time. We wrote our business logic with TDD (Test Driven Development).  We worked on feature branches and tried to maintain source control. We used CircleCI for our project. The web-version is deployed with https://the-dropouts.herokuapp.com/
 
 
-GameRules:
+## GameRules
 
-Tic Tac Toe is a two player game. 
+- Tic Tac Toe is a two player game. 
 
-The first player plays with X figure and the second player plays with O figure. 
+- The first player plays with X figure and the second player plays with O figure. 
 
-Player X always starts the game. 
+- Player X always starts the game. 
 
-The game board is a grid of squares 3x3. 
+- The game board is a grid of squares 3x3. 
 
-Players take turns to mark empty squares with their figures. 
+- Players take turns to mark empty squares with their figures. 
 
-The goal is to get 3 squares marked in a row. Figures can be marked horizontally, vertically and diagonally 
+- The goal is to get 3 squares marked in a row. Figures can be marked horizontally, vertically and diagonally 
 
-Player that first gets 3 squares marked in a row wins the game.
+- Player that first gets 3 squares marked in a row wins the game.
 
-If all 9 squares are marked without any of the players getting 3 squares marked in a row, the game ends in a tie. 
+- If all 9 squares are marked without any of the players getting 3 squares marked in a row, the game ends in a tie. 
 
-In order to start a new game, press the “reset” button.
+- In order to start a new game, press the “reset” button.
 
+## Game Stages
 
 The inital game stages are as follows:
 
