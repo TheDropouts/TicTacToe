@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Our first attempt was to make the game as simple as possible, we wrote it for a console, later on we decided to deploy it also as an web-app. The game is simple and only allows two players to play it at the same computer at the same time. We wrote our business logic with TDD (Test Driven Development).  We worked on feature branches and tried to maintain source control. We used CircleCI for our project. The web-version is deployed with https://the-dropouts.herokuapp.com/
+Our first attempt was to make the game as simple as possible, we wrote it for a console, later on we decided to deploy it also as an web-app. The game is simple and only allows two players to play it on the same computer at the same time.<br/> We wrote our business logic with TDD (Test Driven Development).  We worked on feature branches and tried to maintain source control. We used CircleCI for our project. The web-version is deployed with https://the-dropouts.herokuapp.com/
 
 
 ## Game Rules
