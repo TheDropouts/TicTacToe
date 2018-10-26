@@ -3,7 +3,7 @@ Our application is hosted as an open repository on github.com. <br/>
 You can access it here : https://github.com/TheDropouts
 
 In order to deploy and run our application you need to download nodejs to your computer.<br/>
-You can find it here : [nodejs]https://www.npmjs.com/
+You can find it here : [nodejs](https://www.npmjs.com/)
 
 If you are using your terminal/console can clone the repository to your computer by running 
 the native git command _git clone_ <br/>
