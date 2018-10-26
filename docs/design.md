@@ -30,67 +30,78 @@ The inital game stages are as follows:
 Player X starts the game 
 Input: 1 
 
-| 1 | 2 | 3 |
-| 4 | 5 | 6 |
-| 7 | 8 | 9 |
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    x    |   2   |   3   |
+|    4    |   5   |   6   |
+|    7    |   8   |   9   |
 
 Player O it's your turn!
 Input: 4
-----------
-X | 2 | 3 
-4 | 5 | 6
-7 | 8 | 9
+
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    x    |   2   |   3   |
+|    o    |   5   |   6   |
+|    7    |   8   |   9   |
 
 Player X it's your turn!
 Input: B
-----------
-X | 2 | 3 
-O | 5 | 6
-7 | 8 | 9
+
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    x    |   2   |   3   |
+|    o    |   5   |   6   |
+|    7    |   8   |   9   |
 
 Illegal Move!
 Input: 2
-----------
-X | 2 | 3 
-O | 5 | 6
-7 | 8 | 9
+
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    x    |   x   |   3   |
+|    o    |   5   |   6   |
+|    7    |   8   |   9   |
 
 Player O it's your turn!
 Input: 7
-----------
-X | X | 3 
-O | 5 | 6
-7 | 8 | 9
+
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    x    |   x   |   3   |
+|    o    |   5   |   6   |
+|    o    |   8   |   9   |
 
 
-Player X it's your turn!
-Input: 3
-----------
-X | X | 3 
-O | 5 | 6
-O | 8 | 9
 
 Player X it's your turn!
 Input: 3
-----------
-X | X | X 
-O | 5 | 6
-O | 8 | 9
+
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    x    |   x   |   x   |
+|    o    |   5   |   6   |
+|    o    |   8   |   9   |
+
 
 Player O it's your turn!
 Input: 5
-----------
-X | X | X 
-O | 5 | 6
-O | 8 | 9
+
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    x    |   x   |   x   |
+|    o    |   5   |   6   |
+|    o    |   8   |   9   |
+
 
 Gameover! 
 Player X is the winner 
-Input: 5
-----------
-X | X | X 
-O | 5 | 6
-O | 8 | 9
+| Tick    | Tac   | Toe   |
+| ------- |:-----:| -----:|
+|    x    |   x   |   x   |
+|    o    |   o   |   6   |
+|    o    |   8   |   9   |
+
 
 Winning combinations of the game are: 
 [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7],
