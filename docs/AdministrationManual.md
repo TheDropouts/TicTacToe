@@ -14,6 +14,17 @@ containing the application.
 The game is also deployed as an Web-App. <br/>
 Which you can access here : https://the-dropouts.herokuapp.com/
 
+To be able to deploy and run our application you need to install npm to your terminal/console.<br/>
+So you can do this need to be located in the folder you have downloaded the game into.<br/>
+You need to run the following commands : <br/>
+1. npm install        fetches npm
+2. npm test           runs tests 
+3. npm run Build 
+4. npm run start
+This will run the application as localhost server on this url :<br/>
+http://localhost:3000 <br/>
+
+
 
 How to install and run the program locally <br/>
 Skrefin hér til að setja upp local web-app
