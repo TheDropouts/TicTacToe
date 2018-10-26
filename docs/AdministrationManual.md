@@ -30,7 +30,7 @@ Then you are able to run the following commands : <br/>
 After you start the application it will run the application as localhost server on this url :<br/>
 http://localhost:3000 <br/>
 
-After following all the steps above you can can access the Web-App here : [TicTacToe]]https://the-dropouts.herokuapp.com/
+After following all the steps above you can can access the Web-App here: [TicTacToe](https://the-dropouts.herokuapp.com/)
 
 ## Heroku deployment
 Tic Tac Toe game is also available online through Heroku app. <br/>
