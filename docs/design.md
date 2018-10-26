@@ -30,9 +30,9 @@ The inital game stages are as follows:
 Player X starts the game 
 Input: 1 
 
-1 | 2 | 3 
-4 | 5 | 6
-7 | 8 | 9
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
 
 Player O it's your turn!
 Input: 4
