@@ -1,4 +1,4 @@
-Development Manual
+# Development Manual
 
 Code rules
 Simply coding
@@ -14,7 +14,9 @@ Use TDD Nota NPM test
 
 Installa git - 
 
-Installa node 
+Installa node
+npm run-script startconsole
+node startgame.js
 
 NPM skipanir
 og NPM pakkar sem notaðir eru, 
