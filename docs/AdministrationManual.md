@@ -10,3 +10,15 @@ the native git command _git clone_ <br/>
 Like this : git clone https://github.com/TheDropouts/TicTacToe <br/>
 Or you can use https://github.com/TheDropouts/TicTacToe and download a zipfile 
 containing the application.
+
+The game is also deployed as an Web-App, which you can access here 
+
+https://the-dropouts.herokuapp.com/
+
+
+How to install and run the program locally
+Skrefin hér til að setja upp local web-app
+
+
+How to run the game in a console.
+Skrefin hér til að keyra upp leikinn í console
