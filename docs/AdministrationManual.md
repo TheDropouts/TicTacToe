@@ -1,6 +1,6 @@
 # Administration manual : TicTacToe
 
-## Softwares you will need
+## Softwares
 
 1. You will need a Git to be able to write commands to install and run TicTacToe.<br/>
 You can download the latest version for desired operating system here [Git](https://git-scm.com/downloads).
@@ -21,11 +21,11 @@ containing the application.
 
 To be able to deploy and run our application you need to install npm to your git terminal/console.<br/>
 You need to be located in the folder you have downloaded the game into.<br/>
-Then you are able to run the following commands : <br/>
-1. Type `npm install`   (this command fetches npm)
-2. Type `npm test`      (this command runs tests) 
-3. Type `npm run Build` (this command builds the deployment)
-4. Type `npm run start` (Runs the deployment)
+Then you are able to run the following commands: <br/>
+1. Type `npm install`   (This command fetches npm)
+2. Type `npm test`      (This command runs tests) 
+3. Type `npm run Build` (This command builds the deployment)
+4. Type `npm run start` (This command runs and starts the deployment)
 
 After you start the application it will run the application as localhost server on this url :<br/>
 http://localhost:3000 <br/>
