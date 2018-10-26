@@ -17,19 +17,21 @@ After you have found a desired destination for the application type or copy this
 You can also go to [TheDropouts](https://github.com/TheDropouts) and download a zipfile 
 containing the application.
 
+##Web-App
 
-The game is also deployed as an Web-App. <br/>
-Which you can access here : https://the-dropouts.herokuapp.com/
-
-To be able to deploy and run our application you need to install npm to your terminal/console.<br/>
+To be able to deploy and run our application you need to install npm to your git terminal/console.<br/>
 You need to be located in the folder you have downloaded the game into.<br/>
 Then you are able to run the following commands : <br/>
-1. npm install        fetches npm
-2. npm test           runs tests 
-3. npm run Build 
-4. npm run start
-This will run the application as localhost server on this url :<br/>
+1. Type `npm install`   --fetches npm
+2. Type `npm test`      --runs tests 
+3. Type `npm run Build` --Builds the deployment
+4. Type `npm run start` --Runs the deployment
+
+After you start the application it will run the application as localhost server on this url :<br/>
 http://localhost:3000 <br/>
+
+The game is also deployed as an Web-App. <br/>
+Which you can access here : [TicTacToe]]https://the-dropouts.herokuapp.com/
 
 
 ## Heroku deployment
