@@ -1,4 +1,4 @@
-# Administration manual : TicTacToe
+# Administration manual: TicTacToe
 
 ## Softwares
 
