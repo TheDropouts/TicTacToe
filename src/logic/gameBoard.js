@@ -11,6 +11,8 @@ var gameStatus = false;
 /* The currentPlayer */
 var player = 'o';
 
+var gamecount = 0;
+
 module.exports = {	
 
 	sendGameStatus: function(){
@@ -36,7 +38,7 @@ module.exports = {
 		console.log("Welcome to the game of Tic-Tac-Toe");
 		console.log("To make a make as follow: 1 to go to first column");
 		console.log("To quit the game at anytime, write exit or ctrl + c");
-		console.log("Player " + player + "starts");
+		console.log("Player x starts");
 	},
 	/*Draw the inital gameboard */
 	drawBoard: function()
@@ -51,28 +53,41 @@ module.exports = {
 	/* Main controller for game stages */
 	upDateGameBoard: function (move){
 		
-		console.log("Player " + player + " it's your turn ");
+		if(gameStatus === false)
+		{
+			console.log("Player " + player + " it's your turn ");
+		}
+		
 		var checkInput = gameLogic.validateString(move);
 	    if(checkInput === false)
 	    {	
 	    	console.log("Illegal move");
 	    	return false;
 	    }
-	    else if(gameStatus === true)
-	    {	
-	    	console.log("Gameover!");
-			console.log("Player " + player + " is the winner ");
-	    	return false;
-	    }
-		
+	   
 		
 	    move = gameLogic.getCurrentPlayer(player) + move;
 		player = gameLogic.getCurrentPlayer(player);
     	
-
 	    gameboard = gameLogic.makeAMove(gameboard, move);
-
-	    gameStatus = gameLogic.victoryCheck(gameboard);	
+		
+		gamecount++;
+		
+		if(gamecount > 8)
+		{
+		  console.log( "Draw!");
+		  return false;
+		}
+	    
+		gameStatus = gameLogic.victoryCheck(gameboard);	
+		
+		if(gameStatus === true)
+	    {	
+	    	console.log("---- Gameover! -----");
+			console.log("Player " + player + " is the winner ");
+	    	return false;
+	    }
+		
 	    
 	 
 		return true;
