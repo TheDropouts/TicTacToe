@@ -12,6 +12,14 @@ it("It should return the gameboard if the gamestatus is false ", () => {
 	expect(gameBoard.checkGame(false)).toEqual(false);
 });
 
+it("It should return the true and to advance the gamestate if the input is a number ", () => {
+	expect(gameBoard.upDateGameBoard(1)).toEqual(true);
+});
+
+it("It should return false if the input is a illegal ", () => {
+	expect(gameBoard.upDateGameBoard("db")).toEqual(false);
+});
+
 it("It should return the gameboard if the gamestatus is false ", () => {
 	expect(gameBoard.checkGame(false)).toEqual(false);
 });

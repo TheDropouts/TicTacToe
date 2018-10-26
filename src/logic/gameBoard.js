@@ -1,11 +1,15 @@
 
+/* our access to gameLogic */
 var gameLogic = require('./gameLogic');
 
+/* The gameboard  */ 
 var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-var runningGame = require('./gameBoard');			
+/* gameStatus, when the gamestatus = true, the game is over */
 var gameStatus = false;
-var player = 'x';
+
+/* The currentPlayer */
+var player = 'o';
 
 module.exports = {	
 
@@ -25,12 +29,14 @@ module.exports = {
 	victoryCheck: function(){
 		return gameLogic.victoryCheck( gameState );
 	},
+	/* output function, to greet the player */
 	greetGame: function()
 	{	
 		console.log('\n');
-		console.log("Welcome to the game of Tic-Tac-Toe. first player to start is x");
+		console.log("Welcome to the game of Tic-Tac-Toe");
 		console.log("To make a make as follow: 1 to go to first column");
 		console.log("To quit the game at anytime, write exit or ctrl + c");
+		console.log("Player " + player + "starts");
 	},
 	/*Draw the inital gameboard */
 	drawBoard: function()
@@ -45,6 +51,7 @@ module.exports = {
 	/* Main controller for game stages */
 	upDateGameBoard: function (move){
 		
+		console.log("Player " + player + " it's your turn ");
 		var checkInput = gameLogic.validateString(move);
 	    if(checkInput === false)
 	    {	
@@ -58,9 +65,9 @@ module.exports = {
 	    	return false;
 	    }
 		
-		console.log("Player " + player +   "  it's your turn");
+		
+	    move = gameLogic.getCurrentPlayer(player) + move;
 		player = gameLogic.getCurrentPlayer(player);
-	    move = gameLogic.switchPlayer(move) + move;
     	
 
 	    gameboard = gameLogic.makeAMove(gameboard, move);
