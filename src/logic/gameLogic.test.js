@@ -23,6 +23,34 @@ it("should return x1", () => {
 	expect(gameLogic.valitadeInput("X1")).toBe("x1");
 });
 
+it("should return x", () => {
+	expect(gameLogic.switchPlayer(2)).toBe("x");
+});
+
+it("should return true if input is 1,2,3,4,5,6,7,8,9", () => {
+	expect(gameLogic.validateString(1)).toBe(true);
+});
+
+it("should return false if input is bigger than 9", () => {
+	expect(gameLogic.validateString(10)).toBe(false);
+});
+
+it("should return false if input is less than 1", () => {
+	expect(gameLogic.validateString(0)).toBe(false);
+});
+
+it("should return false if input is less than 1", () => {
+	expect(gameLogic.validateString(-1)).toBe(false);
+});
+
+it("should return false if input is a character", () => {
+	expect(gameLogic.validateString("a")).toBe(false);
+});
+
+it("should return o", () => {
+	expect(gameLogic.switchPlayer(1)).toBe("o");
+});
+
 it("should return ['x','2','3','4','5','6','7','8','9']", () => {
 	expect(gameLogic.makeAMove(['1','2','3','4','5','6','7','8','9'], 'x1' )).toEqual(['x','2','3','4','5','6','7','8','9']);
 });
