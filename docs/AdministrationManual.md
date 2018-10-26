@@ -22,17 +22,15 @@ containing the application.
 To be able to deploy and run our application you need to install npm to your git terminal/console.<br/>
 You need to be located in the folder you have downloaded the game into.<br/>
 Then you are able to run the following commands : <br/>
-1. Type `npm install`   --fetches npm
-2. Type `npm test`      --runs tests 
-3. Type `npm run Build` --Builds the deployment
-4. Type `npm run start` --Runs the deployment
+1. Type `npm install`   (this command fetches npm)
+2. Type `npm test`      (this command runs tests) 
+3. Type `npm run Build` (this command builds the deployment)
+4. Type `npm run start` (Runs the deployment)
 
 After you start the application it will run the application as localhost server on this url :<br/>
 http://localhost:3000 <br/>
 
-The game is also deployed as an Web-App. <br/>
-Which you can access here : [TicTacToe]]https://the-dropouts.herokuapp.com/
-
+After following all the steps above you can can access the Web-App here : [TicTacToe]]https://the-dropouts.herokuapp.com/
 
 ## Heroku deployment
 Tic Tac Toe game is also available online through Heroku app. <br/>
