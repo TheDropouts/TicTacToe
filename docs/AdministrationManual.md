@@ -3,10 +3,10 @@
 ## Softwares
 
 1. You will need a Git to be able to write commands to install and run TicTacToe.<br/>
-You can download the latest version for desired operating system here [Git](https://git-scm.com/downloads).
+You can download the latest version for desired operating system here [Git](https://git-scm.com/downloads)
 
 2. You will need Node package manager.<br/>
-You can get the latest version of Node here [Node.js](https://nodejs.org/en/).
+You can get the latest version of Node here [Node.js](https://nodejs.org/en/)
 
 ## Cloning the application
 
@@ -34,4 +34,4 @@ After following all the steps above you can can access the Web-App here: [TicTac
 
 ## Testing
 If you want to run unit tests you simply need to open git terminal and make sure that you are located in the application folder.<br/>
-Type the following command `npm test`.
+Type the following command `npm test`
