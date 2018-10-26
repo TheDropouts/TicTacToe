@@ -36,6 +36,6 @@ After following all the steps above you can can access the Web-App here: [TicTac
 If you want to run unit tests you simply need to open git terminal and make sure that you are located in the application folder.<br/>
 Type the following command `npm test`
 
-## Latest Version
+## Get Latest Version
 If you want the latest version of the application, you need to be use Git and access the root of the application.
 When in the root of the application you can type `git pull origin master` that will give you the latest version of the application.
