@@ -3,7 +3,7 @@
 ## Softwares you will need:
 
 You will need a git to be able to write commands to install and run TicTacToe.<br/>
-You can get the latest version for your desired operating system here [Git](https://git-scm.com/downloads).
+You can download the latest version for desired operating system here [Git](https://git-scm.com/downloads).
 
 Our application is hosted as an open repository on github.com. <br/>
 You can access it here : https://github.com/TheDropouts
