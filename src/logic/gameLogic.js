@@ -42,7 +42,7 @@ module.exports = {
 			return 'o';
 		}
 	},
-	/* Get the current player */
+	/* Get the current player, specific function for the console game */
 	getCurrentPlayer: function(currPlayer)
 	{
 		if(currPlayer === 'o')
