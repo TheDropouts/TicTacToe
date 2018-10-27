@@ -23,10 +23,15 @@ containing the application and paste it on a desired location on your computer.
 Development should been done with feature branching, if a new feature is being made that person has to work on it in a new branch
 No changes are accepted to master until it's been reviewed and accepted.
 
+## NPM Commands
 
+* The command `npm version` will show you the version you are using for the application among npm and other things.
+* The command `npm install` will install all modules listed as dependencies in package.json
+* The command `npm test` will do a test run for the application showing whether all tests pass or not.
+* The command `npm run-script build` will run and build a web-pack for the Web-App.
+* The command `npm run start` runs and starts the Web-App for your application on [localhost3000](http://localhost:3000)
+* The command `npm run-script startconsole` runs and starts the application on your Git terminal (console).
 
-npm run-script startconsole
-node startgame.js
 
 
 Code rules
@@ -37,11 +42,6 @@ Instructions for setup
 JavaScript og JavaScript library
 Use TDD Nota NPM test
 
-NPM skipanir
-og NPM pakkar sem notaðir eru, 
-
-Deploy 
-Það sem þarf til að keyra web-server 
 
 
 
