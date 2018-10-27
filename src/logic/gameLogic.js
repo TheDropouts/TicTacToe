@@ -1,6 +1,6 @@
 module.exports = {
 
-	/* ## We aren't using validateInput anymore */
+	/* We aren't using validateInput anymore */
 	valitadeInput: function(input){
 		if(input.length != 2){
 			throw input + " is not a valid input only acceptable input is on the form x1 or o1";
@@ -14,7 +14,7 @@ module.exports = {
 		}
 		return input.toLowerCase();
 	},
-
+	/*Take in a string from input in console and return true if it's acceptable*/
 	validateString: function(move)
 	{
 		var validationMask = /[^\d+$]/;
@@ -32,7 +32,7 @@ module.exports = {
 	    	return true;
 	    }
 	},
-
+	/* Take in a counter return the current player, first player is X */
 	switchPlayer: function(counter)
 	{	
 		if(counter % 2 === 0){
@@ -42,7 +42,20 @@ module.exports = {
 			return 'o';
 		}
 	},
-
+	/* Get the current player, specific function for the console game */
+	getCurrentPlayer: function(currPlayer)
+	{
+		if(currPlayer === 'o')
+		{
+			return 'x';
+		}
+		else
+		{
+			return 'o';
+		}
+		
+	},
+	/* Make a move on the gameboard */
 	makeAMove: function(gameState, move){
 
 		if ( gameState[ parseInt(move[1]) - 1 ]  != 'x' && gameState[ parseInt(move[1]) - 1 ] != 'o' ){
@@ -51,12 +64,14 @@ module.exports = {
 		}
 		return gameState;
 	},
+	/* Check if the move is legal, not used anymore */
 	checkIfMoveIsLeagal: function( field ){
 		if(field == 'x' || field == 'o'){
 			return false;
 		}
 		return true;
 	},
+	/*Circle through the 3x3 board and if it's a winning codition return true, else return false */
 	victoryCheck : function( gameState ){
 		if( gameState[0] === gameState[1] && gameState[1] === gameState[2] ){
 			return true;

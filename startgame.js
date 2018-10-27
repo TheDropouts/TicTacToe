@@ -1,2 +1,2 @@
-const StartGame = require('./src/RunInConsole');
+const StartGame = require('./src/logic/RunInConsole');
 StartGame.Run();

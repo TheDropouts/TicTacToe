@@ -1,11 +1,17 @@
 
+/* our access to gameLogic */
 var gameLogic = require('./gameLogic');
-//var Ru1nInConsole = require('./runinconsole');
+
+/* The gameboard  */ 
 var	gameboard =	[1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-var runningGame = require('./gameBoard');			
+/* gameStatus, when the gamestatus = true, the game is over */
 var gameStatus = false;
 
+/* The currentPlayer */
+var player = 'o';
+
+var gamecount = 0;
 
 module.exports = {	
 
@@ -25,13 +31,16 @@ module.exports = {
 	victoryCheck: function(){
 		return gameLogic.victoryCheck( gameState );
 	},
+	/* output function, to greet the player */
 	greetGame: function()
 	{	
 		console.log('\n');
-		console.log("Welcome to the game of Tic-Tac-Toe. first player to start is x");
-		console.log("To make a make as follow: 1 to go to first column");
+		console.log("Welcome to the game of Tic-Tac-Toe");
+		console.log("To make a make input as follow:1 to go to first column");
+		console.log("To quit the game at anytime, write exit or ctrl + c");
+		console.log("Player x starts");
 	},
-	
+	/*Draw the inital gameboard */
 	drawBoard: function()
 	{	
 		
@@ -41,46 +50,79 @@ module.exports = {
 			
 		return '\n' + '' + row1 + '' + row2 + '' + row3 + '\n';
 	},
-
+	/* Main controller for game stages */
 	upDateGameBoard: function (move){
 		
-		//runningGame.checkGame(gameStatus);
+		if(gameStatus === false)
+		{	
+			console.log('\n');
+			console.log("Player " + player + " it's your turn ");
+		}
 		
 		var checkInput = gameLogic.validateString(move);
 	    if(checkInput === false)
 	    {	
-	    	//console.log("Illegal move");
+	    	console.log("Illegal move");
 	    	return false;
 	    }
-	    else if(gameStatus === true)
-	    {	
-	    	console.log("Winner");
-	    	//runningGame.checkGame(gameStatus);
-	    	return false;
-	    }
-	    
-	    move = gameLogic.switchPlayer() + move;
+	   
+		
+	    move = gameLogic.getCurrentPlayer(player) + move;
+		player = gameLogic.getCurrentPlayer(player);
     	
-    	console.log("Player " + move[0]  +	"	It's your turn");
-
 	    gameboard = gameLogic.makeAMove(gameboard, move);
-	    gameStatus = gameLogic.victoryCheck(gameboard);	
+		
+		gamecount++;
+		
+		if(gamecount > 8)
+		{
+		  console.log("---- Draw! -----");
+		  gameStatus = true;
+		  return false;
+		}
+	    
+		gameStatus = gameLogic.victoryCheck(gameboard);	
+		
+		if(gameStatus === true)
+	    {	
+			console.log("Oh sorry!");
+			console.log("---- Gameover! -----");
+			console.log("Player " + player + " is the winner ");
+
+	    	return false;
+	    }
+		
 	    
 	 
 		return true;
 	},
-
-   	checkGame: function(gameStatus)
+	/* Function to end the run of the console */ 
+	endGame: function(runningGame)
 	{	
-		if(gameStatus === true){
-			console.log("Game over!");
-			return runningGame.getWinner(gameboard);
-		}
-		else{
+		var endGame = gameStatus;
+		if(endGame === runningGame)
+		{
 			return false;
 		}
+		else
+		{
+			return true;
+		}
+		
 	},
 
+	
+	/* Not using this function */
+   	checkGame: function(gameStatus)
+	{	
+		if(gameStatus === false){
+			return false;
+		}
+		else{
+			return true;;
+		}
+	},
+    /* Not using this function */ 
 	getWinner: function(gameboard)
 	{	
 		if(gameLogic.victoryCheck(gameboard) === true)
@@ -96,23 +138,6 @@ module.exports = {
 		}*/
 
 	},
-
-	endGame: function(gameStatus)
-	{	
-		// victoryCheck
-		if(gameStatus === true)
-		{
-			console.log("Game is being restarted");
-			gameStatus = false;
-			gameboard =	[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-			turnCount = 1;
-			Player = 'x';
-			
-			return true;
-		}
-		else{
-			return false; 
-		}
-	},
+	
 
 };
