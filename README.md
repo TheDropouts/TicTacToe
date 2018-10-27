@@ -14,7 +14,7 @@ Design: Written in JavaScript and deployed as an Web-App.
 
 Team: The Dropouts
 
-Stefán Örn Hrafnsson - stefanoh17@ru.is
+Stefán Örn Hrafnsson - stefanoh17@ru.is</br>
 Ásþór Ingi Brynjólfsson - asthor13@ru.is
 Hartmann Ingvarsson - hartmann14@ru.is
 Annija Apine - annija17@ru.is
