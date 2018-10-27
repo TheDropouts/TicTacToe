@@ -109,7 +109,7 @@ Player X is the winner
 
 ## Winning Combinations
 
-Winning combinations of the game are if all x's or o's are on the specific numbers: 
+Winning combinations of the game are if all x's or o's are on the specific numbers:<br/> 
 [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7],
 [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]];
 
