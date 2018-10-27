@@ -25,7 +25,6 @@ Instructions for setup
 JavaScript og JavaScript library
 Use TDD Nota NPM test
 
-
 NPM skipanir
 og NPM pakkar sem notaðir eru, 
 
