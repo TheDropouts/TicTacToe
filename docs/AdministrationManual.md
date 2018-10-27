@@ -24,7 +24,7 @@ You need to be located in the folder you have downloaded the game into.<br/>
 Then you are able to run the following commands: <br/>
 1. Type `npm install`   (This command fetches npm)
 2. Type `npm test`      (This command runs tests) 
-3. Type `npm run Build` (This command builds the deployment)
+3. Type `npm run-script build` (This command builds the deployment)
 4. Type `npm run start` (This command runs and starts the deployment)
 
 After you start the application it will run the application as localhost server on this url :<br/>
